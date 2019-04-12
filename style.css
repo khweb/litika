@@ -2985,23 +2985,18 @@ input.chatApp__convInput:focus, input.chatApp__convInput:active {
 .myAccount {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	margin-bottom: 40px;
+	flex-direction: column;
 	background-color: #F7F7F7;
-	border-top-left-radius: 100px;
-	border-bottom-left-radius: 100px;
-	padding-right: 20px;
+	padding: 30px 0;
 }
 
 .myAccount .woocommerce-MyAccount-navigation ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	margin-top: 20px;
 }
 
-.myAccount .woocommerce-MyAccount-navigation ul li {
-	display: inline-block;
-}
 .myAccount .woocommerce-MyAccount-navigation ul li a {
 	background-color: #EBE9EB;
 	display: block;
@@ -3012,7 +3007,9 @@ input.chatApp__convInput:focus, input.chatApp__convInput:active {
 	-moz-transition: all 0.25s ease;
 	-ms-transition: all 0.25s ease;
 	-o-transition: all 0.25s ease;
+	margin-bottom: 10px;
 }
+
 .myAccount .woocommerce-MyAccount-navigation ul li a:hover {
 	background: linear-gradient(65deg, #1274ED 0, #4992F0 100%);
 	background: -moz-linear-gradient(65deg, #1274ED 0, #4992F0 100%);
@@ -3046,7 +3043,12 @@ input.chatApp__convInput:focus, input.chatApp__convInput:active {
 	text-align: center;
 	font-weight: bold;
 	font-size: 16px;
-	margin-right: 20px;
+}
+.woocommerce-MyAccount-content h3 {
+	margin-top: 0;
+}
+.woocommerce-message.woocommerce-message--info.woocommerce-Message.woocommerce-Message--info.woocommerce-info .woocommerce-Button {
+	display: none!important;
 }
 .woocommerce-MyAccount-navigation>ul li.woocommerce-MyAccount-navigation-link--woo-wallet a::before {
 	margin-right: 5px;

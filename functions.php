@@ -204,7 +204,7 @@ function custom_my_account_menu_items( $items ) {
 			'orders'      => __( 'Заказы', 'woocommerce' ),
 			'edit-account'      => __( 'Редактировать', 'woocommerce' ),
 			'accurse'   => __( 'Доступные курсы', 'woocommerce' ),
-			'chat'   => __( 'Чат', 'woocommerce' ),
+			'chat'   => __( 'Задать вопрос', 'woocommerce' ),
 			'customer-logout'   => __( 'Выйти', 'woocommerce' )
 	);
 

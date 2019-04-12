@@ -159,9 +159,9 @@ class ChatBox extends React.Component {
 	}
 	render() {
 		this.messageList = this.messageList.length == 0 ? this.props.messages : this.messageList;
-
+		let classWR = this.props.full == 1 ? 'chatApp__conv col-lg-12' : 'chatApp__conv col-lg-6';
 		return (
-			<div className={"chatApp__conv col-lg-6"}>
+			<div className={classWR}>
 				<Title
 					owner={this.props.title}
 				/>
@@ -290,6 +290,7 @@ class ChatRoom extends React.Component {
 			userTo={userToID}
 			userToAvatar={userToAvatar}
 			title={'Задать вопрос'}
+			full={1}
 			/>
 		}
 		return (

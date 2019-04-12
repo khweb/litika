@@ -23,23 +23,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<p><?php
-	/* translators: 1: user display name 2: logout url */
-	printf(
-		__( 'Hello %1$s (not %1$s? <a href="%2$s">Log out</a>)', 'woocommerce' ),
-		'<strong>' . esc_html( $current_user->display_name ) . '</strong>',
-		esc_url( wc_logout_url( wc_get_page_permalink( 'myaccount' ) ) )
-	);
-?></p>
+<h3>Добро пожаловать!</h3>
+<div class="ads-wr-loop">
+	<?php 
+		$post_args = array(
+			'post_type' => 'ads'
+		);
+		$query =  new WP_Query( $post_args );
+	?>
+	<?php if($query -> have_posts()): while ($query -> have_posts()) : $query -> the_post(); ?>
 
-<p><?php
-	printf(
-		__( 'From your account dashboard you can view your <a href="%1$s">recent orders</a>, manage your <a href="%2$s">shipping and billing addresses</a>, and <a href="%3$s">edit your password and account details</a>.', 'woocommerce' ),
-		esc_url( wc_get_endpoint_url( 'orders' ) ),
-		esc_url( wc_get_endpoint_url( 'edit-address' ) ),
-		esc_url( wc_get_endpoint_url( 'edit-account' ) )
-	);
-?></p>
+		<div <?php post_class('adsItem'); ?>>
+			<div class="adsItem-title"><?php the_title(); ?></div>
+			<div class="adsItem-content"><?php echo wp_trim_words( get_the_content(), 20 ); ?></div>
+			
+		</div>
+
+<?php endwhile; wp_reset_postdata(); endif;?>
+</div>
 
 <?php
 	/**
