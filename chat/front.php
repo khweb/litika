@@ -159,26 +159,28 @@ class ChatBox extends React.Component {
 	}
 	render() {
 		this.messageList = this.messageList.length == 0 ? this.props.messages : this.messageList;
-		let classWR = this.props.full == 1 ? 'chatApp__conv col-lg-12' : 'chatApp__conv col-lg-6';
+		let classWR = this.props.full == 1 ? 'col-lg-12' : 'col-lg-6';
 		return (
 			<div className={classWR}>
-				<Title
-					owner={this.props.title}
-				/>
-				<MessageList
-					messages={this.messageList}
-					user={this.props.user}
-					userTo={this.props.userTo}
-					userToAvatar={this.props.userToAvatar}
-				/>
-				<div className={"chatApp__convSendMessage clearfix"}>
-					<InputMessage
-						isLoading={this.state.isLoading}
+				<div className={'chatApp__conv'}>
+					<Title
+						owner={this.props.title}
+					/>
+					<MessageList
+						messages={this.messageList}
 						user={this.props.user}
 						userTo={this.props.userTo}
-						sendMessage={this.props.sendMessage}
-						sendMessageLoading={this.sendMessageLoading}
+						userToAvatar={this.props.userToAvatar}
 					/>
+					<div className={"chatApp__convSendMessage clearfix"}>
+						<InputMessage
+							isLoading={this.state.isLoading}
+							user={this.props.user}
+							userTo={this.props.userTo}
+							sendMessage={this.props.sendMessage}
+							sendMessageLoading={this.sendMessageLoading}
+						/>
+					</div>
 				</div>
 			</div>
 		);

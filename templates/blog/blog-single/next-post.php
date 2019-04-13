@@ -6,7 +6,7 @@
  * @since 1.0
  */
 ?>
-
+<?php if (get_post_type() == 'lessons') : ?>
 <?php
 	$termId = get_the_terms($post->ID, 'curs')[0]->term_id;
 
@@ -50,5 +50,5 @@ if (count($ids) >= 2) {
 	}
 
 }
-
+endif;
 ?>
