@@ -2889,8 +2889,8 @@ input.chatApp__convInput:focus, input.chatApp__convInput:active {
 	40% { box-shadow: 0 1em 0 0; }
 }
 @keyframes fadeChatApp {
-	0% { opacity: 0; transform: translateY(1rem); }
-	100% { opacity: 1; transform: translateY(0px); }
+	0% { opacity: 0; }
+	100% { opacity: 1; }
 }
 @keyframes fadeNewMessage {
 	0% { opacity: 0; transform: translateY(1rem); }
