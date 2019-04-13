@@ -2,7 +2,7 @@
 /**
  * Single.php
  *
- * @package lptheme
+ * @package lptheme single
  * @since 1.0
  */
 get_header();
