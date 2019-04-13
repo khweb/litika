@@ -57,6 +57,11 @@ html{overflow-x: hidden;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit
 ::-moz-selection {background: #b3d4fc;text-shadow: none;}
 ::selection {background: #b3d4fc;text-shadow: none;}
 
+html {
+	background: #eee;
+}
+
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
@@ -65,7 +70,8 @@ body {
     color: #0d2e45;
   max-width: 1920px;
   margin: 0 auto;
-  overflow-x: hidden;
+	overflow-x: hidden;
+	background: #fff;
 }
 h1,h2,h3,h4,h5,h6 {
   margin-bottom: 0.5em;
