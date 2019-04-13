@@ -183,7 +183,8 @@ $userCurs = get_field('curs-items', $userId);
 
 	<?php endforeach;?>
 	<?php else :?>
-	<p>Доступных курсов нет. <a href="">Приобрести курс</a></p>
+	<div class="col-lg-12"><p>Доступных курсов нет. <a href="<?= get_home_url(); ?>">Приобрести курс</a></p></div>
+	
 	<?php endif;?>
 </div>
 
@@ -230,7 +231,8 @@ function add_my_currency_symbol( $currency_symbol, $currency ) {
 }
 
 
-
+// ------------------
+// add curs for user after paid
 add_action('woocommerce_thankyou', 'enroll_student', 10, 1);
 function enroll_student( $order_id ) {
     if ( ! $order_id )
