@@ -2971,13 +2971,17 @@ input.chatApp__convInput:focus, input.chatApp__convInput:active {
 .head-user-wr .user {
 	display: flex;
 }
-.user-info {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	line-height: 1.1;
+
+.user-info a {
+	font-size: 11px;
 }
+
+.user-info span {
+	display: block;
+	border-bottom: 1px solid #98989847;
+	font-size: 13px;
+}
+
 .user-wallet .woo-wallet-menu-contents {
 	color: #f44336;
 }
